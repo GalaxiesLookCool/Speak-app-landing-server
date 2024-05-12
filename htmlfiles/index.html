@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakApp - Connect Freely</title>
+<style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes popIn {
+      0% { transform: scale(0); }
+      80% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://gifdb.com/images/high/purple-sky-with-shining-stars-4h2qjs2chxmci8i2.gif'); /* Replace with your chosen gif */
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(187, 134, 252, 0.7); /* Light purple/gray */
+      padding: 1rem;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .features {
+      padding: 4rem;
+      margin: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 3s ease-in-out;
+      background-color: rgba(150, 150, 150, 0.3);
+    }
+    .download-btn {
+      display: block;
+      width: 200px;
+      padding: 1rem;
+      margin: 2rem auto;
+      background-color: #4B0082; /* Indigo */
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: transform 0.3s, background-color 0.3s;
+      animation: popIn 0.6s ease-out;
+    }
+    .download-btn:hover, .download-btn:focus {
+      transform: scale(1.05);
+      background-color: #6A0DAD;
+    }
+    .made-by {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      animation: fadeIn 4s ease-in-out;
+    }
+    .features-list {
+      list-style-type: none; /* Remove default list styling */
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    .features-list li {
+      cursor: default;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      transition: transform 0.3s, background-color 0.3s;
+      transform-origin: center;
+      font-size: 1.1rem;
+      position: relative;
+      background-color: #fdf5ff;
+    }
+    .features-list li::before {
+      content: '• '; /* Add a dot before each feature */
+      color: #4B0082; /* Color of the dot */
+      font-weight: bold; /* Make the dot bold */
+    }
+    .features-list li:hover {
+      transform: scale(1.05);
+      background-color: #E6E6FA; /* Animated into light purple */
+    }
+    .short-explanation {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .tooltip-box {
+      position: absolute;
+      visibility: hidden;
+      width: auto;
+      background-color: #f9f9f9;
+      color: #000;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  </style>
+  
+</head>
+<body>
+  <nav class="navbar">
+    <a href="main.html">SpeakApp</a>
+    <div>
+      <a href="about.html">About</a>
+      <a href="download.html">Download</a>
+    </div>
+  </nav>
+
+  <section class="features">
+    <h1>Welcome to SpeakApp!</h1>
+    <p>Developed by Ronen from Brenner, SpeakApp is your go-to chat application that connects you across platforms and devices seamlessly. Here's what makes SpeakApp stand out:</p>
+    <ul class="features-list">
+        <li data-tooltip="SpeakApp can be used seamlessly across different platforms, including Mac, Windows, and Linux, ensuring users can communicate without the need for specific hardware or software requirements.">
+            Cross-Platform Compatibility
+            <span class="short-explanation">Available on all major operating systems.</span>
+          </li>
+          <li data-tooltip="SpeakApp is accessible to everyone at no charge, offering full access to its messaging capabilities without any subscription fees or hidden costs.">
+            Completely Free
+            <span class="short-explanation">No cost to use all features.</span>
+          </li>
+          <li data-tooltip="SpeakApp provides immediate transmission of messages, allowing for instantaneous communication, which is essential for timely conversations and quick exchanges of information.">
+            Instant Messaging
+            <span class="short-explanation">Real-time message delivery.</span>
+          </li>
+          <li data-tooltip="Users can share files, images, and voice notes effortlessly within the app, enhancing the communication experience by making it more versatile and functional for personal and professional use.">
+            File Sharing
+            <span class="short-explanation">Easy sharing of various file types.</span>
+          </li>
+          <li data-tooltip="SpeakApp supports one-on-one conversations for privacy as well as group chats for collaborative discussions, providing flexibility for different communication needs.">
+            Flexible Chatting
+            <span class="short-explanation">Private and group chat options.</span>
+          </li>
+          <li data-tooltip="With two-factor authentication via email, SpeakApp adds an additional layer of security to user accounts, protecting against unauthorized access and enhancing user trust.">
+            Secure Access
+            <span class="short-explanation">Enhanced account security.</span>
+          </li>
+          <li data-tooltip="SpeakApp allows users to be logged in on multiple devices at the same time, ensuring they remain connected and can switch between devices seamlessly without missing any messages.">
+            Multi-Device Login
+            <span class="short-explanation">Simultaneous login across devices.</span>
+          </li>
+          <li data-tooltip="SpeakApp protects your conversations with AES and RSA encryption, and securely hashes passwords for your privacy and security.">
+            Encryption
+            <span class="short-explanation">Robust protection for conversations.</span>
+          </li>
+          <li data-tooltip="Users can personalize their profiles by changing their pictures and usernames, allowing them to express their individuality and make their profiles unique.">
+            Personalization
+            <span class="short-explanation">Customizable user profiles.</span>
+          </li>
+          <li data-tooltip="SpeakApp shows when users were last active or if they are currently online, giving others insight into their availability for conversation.">
+            Online Presence
+            <span class="short-explanation">Visibility of user activity status.</span>
+          </li>
+          <li data-tooltip="SpeakApp provides the capability for users to host their own servers, offering full control over the chat environment and ensuring data sovereignty for those who require it.">
+            Self-Hosting
+            <span class="short-explanation">Option to host independent servers.</span>
+          </li>
+          
+
+      <!-- Repeat for other features, adding short explanations and data-tooltip attribute for detailed explanations -->
+    </ul>
+
+    <a href="download.html" class="download-btn">Download Now</a>
+
+    <div class="made-by">
+      Made by Ronen Tumarov from Brenner
+    </div>
+
+  </section>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var featureItems = document.querySelectorAll('.features-list li');
+      featureItems.forEach(function(item) {
+        item.addEventListener('mouseenter', function(e) {
+          var tooltipBox = document.createElement('div');
+          tooltipBox.classList.add('tooltip-box');
+          tooltipBox.textContent = e.target.getAttribute('data-tooltip');
+          document.body.appendChild(tooltipBox);
+          tooltipBox.style.top = (e.pageY + 15) + 'px';
+          tooltipBox.style.left = (e.pageX + 15) + 'px';
+          tooltipBox.style.visibility = 'visible';
+        });
+        item.addEventListener('mousemove', function(e) {
+          var tooltipBox = document.querySelector('.tooltip-box');
+          tooltipBox.style.top = (e.pageY + 15) + 'px';
+          tooltipBox.style.left = (e.pageX + 15) + 'px';
+        });
+        item.addEventListener('mouseleave', function() {
+          var tooltipBox = document.querySelector('.tooltip-box');
+          if (tooltipBox) {
+            tooltipBox.remove();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

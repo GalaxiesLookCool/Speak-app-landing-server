@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About SpeakApp</title>
+<link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+</head>
+<body>
+    <style>
+        body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9; /* Light gray background for the whole page */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4B0082; /* Indigo */
+  padding: 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.about-header {
+  background-color: rgba(255,255,255, 0); /* Light purple */
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-header h1 {
+  margin: 0;
+  color: rgba(255,255,255,1);
+}
+
+.about-header p {
+  color: rgba(255,255,255,1);
+}
+
+.development-story,
+.technical-details {
+  padding: 2rem;
+  margin: 2rem;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(187, 134, 252, 0.7); /* Light purple/gray */
+      padding: 1rem;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+
+.development-story h2,
+.technical-details h2 {
+  color: #4B0082; /* Indigo */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: rgba(255,255,255,0); /* Light purple */
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.about-footer {
+  background-color: #4B0082; /* Indigo */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.made-by {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      animation: fadeIn 4s ease-in-out;
+      margin-bottom: 20px;
+    }
+    @keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+.bounce {
+  animation: bounce 2s;
+}
+
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.slide-in-left {
+  animation: slideInFromLeft 1s ease-out;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.pulse {
+  animation: pulse 2s;
+}
+body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://gifdb.com/images/high/purple-sky-with-shining-stars-4h2qjs2chxmci8i2.gif'); /* Replace with your chosen gif */
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .download-btn {
+      display: block;
+      width: 200px;
+      padding: 1rem;
+      margin: 2rem auto;
+      background-color: #4B0082; /* Indigo */
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: transform 0.3s, background-color 0.3s;
+      animation: popIn 0.6s ease-out;
+    }
+    .download-btn:hover, .download-btn:focus {
+      transform: scale(1.05);
+      background-color: #6A0DAD;
+    }
+
+
+
+    </style>
+  <nav class="navbar fade-in">
+    <a href="index.html">SpeakApp</a>
+    <div>
+      <a href="about.html">About</a>
+      <a href="download.html">Download</a>
+    </div>
+  </nav>
+
+  <header class="about-header">
+    <h1>About SpeakApp</h1>
+    <p>Discover the story and technology behind your favorite chat application.</p>
+  </header>
+
+  <section class="development-story bounce">
+    <h2>The Development Story</h2>
+    <p>
+      SpeakApp is the App that I (Ronen) created as my senior-year project in highschool. I choose a chat app as my project for a few various reasons, but the main one is my interest and my desire to make a good and functional app
+    </p>
+    <p>
+      In the beginning of the project, i still did not even decide on what framework/progamming-language I would use for my project. But as the time went on, more and more things clicked into place, until it became the final result - SpeakApp
+    </p>
+  </section>
+
+  <section class="technical-details pulse">
+    <h2>Technical Side of SpeakApp</h2>
+    <p>
+      At its core, SpeakApp is built on a foundation of cutting-edge technologies that ensure reliability, speed, and security. Here are some of the technical highlights:
+    </p>
+    <ul>
+      <li><strong>Cross-Platform Functionality:</strong> SpeakApp’s cross-platform functionality is a testament to the power of modern application development. By harnessing the Electron engine, SpeakApp unites the performance of native applications with the versatility of web technologies. This fusion allows SpeakApp to operate seamlessly across Mac, Windows, and Linux, providing users with a consistent and engaging experience no matter their choice of device. Electron’s ability to integrate with native system features while maintaining the agility of web updates positions SpeakApp at the forefront of accessible and adaptive communication tools.</li>
+      <li><strong>Real-Time Messaging:</strong> SpeakApp’s real-time messaging is engineered to deliver messages with the speed and reliability of a dedicated courier. At the heart of this system lies a multi-threaded TCP socket architecture, ensuring that server-side processes run concurrently without a hitch. This robust foundation is enhanced by a sophisticated level 5 protocol layered on top of TCP, which guarantees the integrity and completeness of each message. With this protocol, messages are meticulously assembled and delivered in their entirety, ensuring that every word, emoji, or attachment reaches its destination exactly as sent. It’s this meticulous attention to detail that makes SpeakApp’s messaging not just real-time but reliably real-time.</li>
+      <li><strong>Encryption Standards:</strong> SpeakApp’s encryption standards are the bulwark that ensures user data remains confidential and secure. The app employs a dual-layer encryption mechanism where RSA is used to safely exchange AES keys between users. Once the AES keys are exchanged, AES-GCM (Galois/Counter Mode) is utilized to encrypt the entire message, providing both privacy and integrity assurance.
+
+        The security measures extend to password protection; passwords are hashed before they are stored in the database. This means that even in the unlikely event of a database breach, the actual passwords remain inaccessible. Furthermore, SpeakApp enhances security with the use of one-time session tokens, which means that each session is uniquely secured and cannot be reused, effectively preventing session hijacking attempts.
+        
+        This comprehensive approach to encryption and security ensures that SpeakApp users can communicate with confidence, knowing their conversations are protected by some of the most robust standards in the industry.</li>
+      <li><strong>Scalable Architecture:</strong> SpeakApp’s architecture is a marvel of scalability, designed to grow with its user base. At its core, the server employs multi-threading, a technique that allows multiple threads to execute concurrently, making full use of the CPU’s capabilities to handle numerous users simultaneously. This ensures that as the number of users increases, SpeakApp’s performance remains smooth and responsive.
+
+        The backend is complemented by an SQLite database, renowned for its speed and efficiency. SQLite provides a lightweight yet powerful solution for storing and retrieving data quickly, which is crucial for maintaining swift app interactions. Whether it’s user credentials, message histories, or file transfers, SQLite handles it all with ease, ensuring that SpeakApp’s data management is as fast as it is reliable.
+        
+        Together, the multi-threaded server and SQLite database form the backbone of SpeakApp’s scalable architecture, ready to support a growing community of users without skipping a beat.</li>
+      <li><strong>Open Source Libraries:</strong> SpeakApp’s commitment to open source is foundational to its philosophy. The entire codebase is open to the public, inviting collaboration, peer review, and community contributions. This transparency not only fosters trust but also encourages innovation and collective problem-solving.
+
+        By exclusively using open source libraries, SpeakApp ensures that every component of the app is accessible and modifiable. This approach allows for continuous improvement and adaptability, as open source libraries are often at the forefront of technology, driven by the contributions of developers worldwide.
+        
+        The use of open source libraries also means that SpeakApp can quickly integrate fixes, updates, and new features, keeping the app agile and up-to-date with the latest advancements in software development. It’s a testament to the power of community and the shared goal of creating the best possible communication tool for users everywhere.</li>
+    </ul>
+  </section>
+  <a href="download.html" class="download-btn">Download Now</a>
+  <div class="made-by">
+    Made by Ronen Tumarov from Brenner
+  </div>
+
+</body>
+</html>

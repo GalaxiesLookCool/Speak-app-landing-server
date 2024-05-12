@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download SpeakApp</title>
+<style>
+  /* Add all the CSS from the main page here */
+  /* ... */
+  
+  /* Additional styles for the download page */
+  .download-instructions {
+    padding: 2rem;
+    margin: 2rem;
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .download-link {
+    display: block;
+    width: 200px;
+    padding: 1rem;
+    margin: 2rem auto;
+    background-color: #4B0082; /* Indigo */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.3s, background-color 0.3s;
+    animation: popIn 0.6s ease-out;
+  }
+  
+  .download-link:hover, .download-link:focus {
+    transform: scale(1.05);
+    background-color: #6A0DAD;
+  }
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes popIn {
+      0% { transform: scale(0); }
+      80% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://gifdb.com/images/high/purple-sky-with-shining-stars-4h2qjs2chxmci8i2.gif'); /* Replace with your chosen gif */
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 2s ease-in-out;
+      text-align:center
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(187, 134, 252, 0.7); /* Light purple/gray */
+      padding: 1rem;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .features {
+      padding: 4rem;
+      margin: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 3s ease-in-out;
+      background-color: rgba(150, 150, 150, 0.3);
+    }
+    .download-btn {
+      display: block;
+      width: 200px;
+      padding: 1rem;
+      margin: 2rem auto;
+      background-color: #4B0082; /* Indigo */
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: transform 0.3s, background-color 0.3s;
+      animation: popIn 0.6s ease-out;
+    }
+    .download-btn:hover, .download-btn:focus {
+      transform: scale(1.05);
+      background-color: #6A0DAD;
+    }
+    .made-by {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      animation: fadeIn 4s ease-in-out;
+    }
+    .features-list {
+      list-style-type: none; /* Remove default list styling */
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    .features-list li {
+      cursor: default;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      transition: transform 0.3s, background-color 0.3s;
+      transform-origin: center;
+      font-size: 1.1rem;
+      position: relative;
+      background-color: rgba(255,255,255, 0);
+    }
+    .features-list li::before {
+      content: '• '; /* Add a dot before each feature */
+      color: #4B0082; /* Color of the dot */
+      font-weight: bold; /* Make the dot bold */
+    }
+    .features-list li:hover {
+      transform: scale(1.05);
+      background-color: #E6E6FA; /* Animated into light purple */
+    }
+    .short-explanation {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .tooltip-box {
+      position: absolute;
+      visibility: hidden;
+      width: auto;
+      background-color: #f9f9f9;
+      color: #000;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .center {
+        text-align: center;
+  list-style-position: inside;
+    }
+  
+  /* You can add more styles specific to the download page here */
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">SpeakApp</a>
+    <div>
+      <a href="about.html">About</a>
+      <a href="download.html" class="active">Download</a>
+    </div>
+  </nav>
+
+  <section class="download-instructions" >
+    <h1>Download SpeakApp</h1>
+    <p>Follow these steps to install SpeakApp on your device:</p>
+    <ol class="center">
+      <li>Select the version for your operating system.</li>
+      <li>Download the .zip file.</li>
+      <li>Unzip the file and run the setup executable.</li>
+      <li>Follow the installation wizard to complete the setup.</li>
+    </ol>
+    <a href="downloads/SpeakApp.exe" class="download-link">Download Portable for Windows</a>
+    <a href="downloads/windows.zip">Download Installer</a>
+    <a href="downloads/SpeakApp_Linux.zip" class="download-link">Download for Linux</a>
+    <p>For more information and source code, visit our <a href="https://github.com/galaxieslookcool" class="download-link">GitHub page</a>.</p>
+  </section>
+
+  <div class="made-by">
+    Made by Ronen Tumarov from Brenner
+  </div>
+
+  <footer class="about-footer">
+    <p>SpeakApp © 2024. All rights reserved.</p>
+  </footer>
+
+  <script>
+    /* You can reuse the script from the main page for tooltips */
+    /* ... */
+  </script>
+
+</body>
+</html>
